@@ -2,7 +2,9 @@
     const buttonElement = document.getElementById("myButton");
     const tipButtons = document.querySelectorAll("button");
 
-    let calculatorDisplay = document.querySelector('h1');
+    let calculatorDisplay = document.getElementById("sub");
+    let calculatorDisplay2 = document.getElementById("tip");
+    let calculatorDisplay3 = document.getElementById("total");
     let tipValue = 0;
     let tipTotal = 0;
     let billTotal = 0;
@@ -10,7 +12,6 @@
 
     buttonElement.addEventListener("click", () => {
         billTotal = inputElement.value; 
-        //console.log("User input:", billTotal)
         return billTotal;
     })
 
@@ -19,7 +20,9 @@
             tipValue = tipButtons.value;
             tipTotal = billTotal*tipValue;
             finalBill = (+tipTotal)+(+billTotal);
-            calculatorDisplay.textContent = ("Tip total: " + tipTotal + " " + "Total: " + finalBill);
+            calculatorDisplay.textContent = (billTotal);
+            calculatorDisplay2.textContent = (tipTotal);
+            calculatorDisplay3.textContent = (finalBill);
         })
     });
 

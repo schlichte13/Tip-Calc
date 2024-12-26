@@ -1,2 +1,57 @@
+html {
+    box-sizing: border-box;
+}
 
+body {
 
+    background: rgb(255, 255, 255);
+
+}
+
+.space {
+    word-spacing: 220px;
+}
+
+.space2 {
+    word-spacing: 238px; 
+}
+
+.space3 {
+    word-spacing: 240px;
+}
+
+h1 {
+    text-indent: 90px;
+    padding: 0 290px;
+}
+
+h2 {
+    text-indent: 140px;
+    padding: 0 290px;
+}
+
+h3 {
+    text-indent: 250px;
+    padding: 0 290px;
+}
+
+h4{
+    text-indent: 10px;
+    padding: 0 290px;
+}
+
+p{
+    text-indent: 10px;
+    padding: 0 290px;
+}
+
+.button{
+    position: relative;
+    left: 290px;
+
+}
+
+.inputBox {
+    position: relative;
+    left: 290px;
+}
