@@ -10,21 +10,33 @@
     let billTotal = 0;
     let finalBill = 0;
 
+
+    let slider = document.getElementById("myRange");
+    let output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+       tipValue = output.innerHTML / 100;
+       tipTotal = billTotal*tipValue;
+       finalBill = (+tipTotal)+(+billTotal);
+       calculatorDisplay2.textContent = (tipTotal);
+       calculatorDisplay3.textContent = (finalBill);
+    }
+
+    
+
     buttonElement.addEventListener("click", () => {
         billTotal = inputElement.value; 
+        tipTotal = billTotal*tipValue;
+        finalBill = (+tipTotal)+(+billTotal);
+        calculatorDisplay2.textContent = (tipTotal);
+        calculatorDisplay3.textContent = (finalBill);
         return billTotal;
     })
 
-    tipButtons.forEach((tipButtons) => {
-        tipButtons.addEventListener("click", () => {
-            tipValue = tipButtons.value;
-            tipTotal = billTotal*tipValue;
-            finalBill = (+tipTotal)+(+billTotal);
-            calculatorDisplay.textContent = (billTotal);
-            calculatorDisplay2.textContent = (tipTotal);
-            calculatorDisplay3.textContent = (finalBill);
-        })
-    });
+
+
 
 
 

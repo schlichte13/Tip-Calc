@@ -8,8 +8,6 @@
 
     <body>
 
-
-        <!-- <div class="calculatorDisplay"> -->
             <!--<h1>love you from maggie</h1> -->
             <h1> Good Restaurant</h1>
             <h2> 123 Elm Street</h2>
@@ -17,23 +15,21 @@
             <p> Guest <span class="space">Check </span>Party of 2<p>
             <p> Table <span class="space2">100 </span>Ticket 1 <p>
             <p> Server: Maxwell </p>
-            <p> 12:00 <span class="space3">PM </span>Date 12/26/24</p>   
+            <p> 12:00 <span class="space3">PM </span>Date 12/20/24</p>   
             <hr width="50%" size="2">
             <h4> 4 MARGARITA </h4>
             <h4> 1 CHK QUESA</h4>
             <h4> 1 STK BURRITO</h4>
             <hr width="50%" size="2">
-            <h3> SUB TOTAL: $ <span id="sub"> 0.00</span></h3>
+            <h3> SUB TOTAL: $ <span id="sub"><input type="text" class="inputBox" id="myInput"><button class="button" id="myButton">Submit</button> </span></h3>
             <h3> TIP: $ <span id="tip"> 0.00</span></h3>
             <h3> TOTAL: $ <span id="total"> 0.00</span> </h3>
-        <!-- </div> -->
     
 
-        <input type="text" class="inputBox" id="myInput">
-        <button class="button" id="myButton">Submit</button>
-        <button class="button" id="tipButton" value=".15">15%</button>
-        <button class="button" id="tipButton" value=".2">20%</button>
-        <button class="button" id="tipButton" value=".25">25%</button>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <h5> <span id="demo"></span>%</h5>
+        </div>
 
         <script src="tipCalc.js"></script>
     </body>
