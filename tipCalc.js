@@ -15,6 +15,14 @@
     let output = document.getElementById("demo");
     output.innerHTML = slider.value;
 
+    const dateRaw = new Date();
+    let timeFormatted = dateRaw.toLocaleTimeString();
+    let dateFormatted = dateRaw.toLocaleDateString();
+
+    document.getElementById('date-time').innerHTML= timeFormatted;
+    document.getElementById('current-date').innerHTML = dateFormatted;
+
+
     slider.oninput = function() {
         output.innerHTML = this.value;
        tipValue = output.innerHTML / 100;
